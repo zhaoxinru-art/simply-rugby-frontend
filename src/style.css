@@ -1,0 +1,11 @@
+/* 全局重置，解决跨浏览器样式差异 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 全局字体 */
+body {
+  font-family: Arial, sans-serif;
+}

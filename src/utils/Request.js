@@ -1,0 +1,20 @@
+import axios from 'axios'
+
+const request = axios.create({
+    baseURL: 'http://localhost:8081',
+    timeout: 5000,
+    withCredentials: true
+})
+
+// 请求拦截
+request.interceptors.request.use(config => {
+    return config
+})
+
+// 响应拦截
+request.interceptors.response.use(
+    res => res.data,
+    err => Promise.reject(err)
+)
+
+export default request
